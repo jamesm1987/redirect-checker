@@ -58,7 +58,7 @@ function App() {
     setResults(null);
 
     try {
-      const response = await fetch('/.netlify/functions/checkRedirects', {
+      const response = await fetch(`${process.env.REACT_APP_NETLIFY_FUNCTION_URL}/.netlify/functions/checkRedirects`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
